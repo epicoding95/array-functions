@@ -14,7 +14,7 @@ A website created with C# and HTML where a user can submit a word and determine 
 | :-------------     | :------------- | :------------- |
 | **The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels."** | Example Input: 3| Example Output: 3 |
 | **The program adds "ay" to single-letter words beginning with a vowel.** | Example Input: "i" | Example Output: iay |
-| **Program Removes Spaces from User Input**| User Input: "pants pants" | Output: "pantspants" |
-| **Program Removes Punctuation from User Input**| Input: "p#an^t@s  /p(ant%s" | Output: "pantspants" |
-| **Program Assigns Characters Numeric Values** | Input: "pants" | Output: "3 1 1 1 1" |
-| **Program Sums Character Values**| Input: "3 1 1 1 1" | Page Displays: 7 |
+| **if the word starts with a consonant, remove the consonant, put it at the end, add "ay"**| User Input: "spray" | Output: "ayspray" |
+| **if the first consonant includes "qu" move the "u" along with the "q".**| Input: "squeal" | Output: "uealsqay" |
+| **words beginning with "y" treat "y" as a consonant** | Input: "yours" | Output: "oursyay" |
+
