@@ -1,28 +1,74 @@
+  function convertToRoman(num) {
 
-function translate(string){
+    var roman = {
+      M: 1000,
+      CM: 900,
+      D: 500,
+      CD: 400,
+      C: 100,
+      XC: 90,
+      L: 50,
+      XL: 40,
+      X: 10,
+      IX: 9,
+      V: 5,
+      IV: 4,
+      I: 1
+    };
+    var str = '';
 
-    var vowel = ['a','e','i','o','u', 'A',
-    'E','I','O','U'];
+    for (var i of Object.keys(roman)) {
 
-      var newStringArray = string.split(" ")
-       var consonantCluster = ['-'];
-      var singleWord = input.split('');
-      for(index=0; index = vowel[]; index++;)
+      var q = Math.floor(num / roman[i]);
 
-        if (newStringArray.map(function(mapped)))
+      num -= q * roman[i];
+      
+      str += i.repeat(q);
+    }
+
+    return str;
+  }
 
 
-$(function(){
-  $("form").submit(function(event) {
+
+
+
+$(document).ready(function() {
+  $('form').submit(function(event) {
     event.preventDefault();
-    string =($("#inputString").val());
-
-
-
-
-
-     });
+    var output = convertToRoman (parseInt($("input#number").val()));
+    $("#output").text(output);
+  });
 });
+
+
+//
+// $(function(){
+//   $("form").submit(function(event) {
+//     event.preventDefault();
+// //     string =parseInt($("#number").val()).split();
+// //     // if{ userInput.length == 1){
+// //     //   isOnes(userInput)
+// //     //
+// //     // }
+//
+
+//
+//
+//
+//
+//     $("#output").text("This is your number in roman numeral:");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//      });
+// });
 
 // function translate(string) {
 //   var vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U', 'y', 'Y'];
@@ -57,4 +103,3 @@ $(function(){
 //     var result = translate(userInput);
 //     $('#result p').text(result);
 //   })
-// });
